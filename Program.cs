@@ -5,18 +5,17 @@
 */
 int a;
 int b;
+int x = 1;
 
 Console.Write($"Введите первое число: ");
 int.TryParse(Console.ReadLine(), out a);
 
 Console.Write($"Введите второе число: ");
 int.TryParse(Console.ReadLine(), out b);
-int x = a;
-int c = 1;
 
-while (c <= b)
+for (int i = 1; i <= b; i++)
 {
-    a *= a;
-    c++;
+    x *= a;
 }
-Console.Write($" {a}, {b} -> {c}");
+
+Console.Write($" {a}, {b} -> {x}");
